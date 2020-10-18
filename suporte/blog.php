@@ -12,6 +12,7 @@ if($_SESSION['access_level'] != 'Suporte'){
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Typper | Dashboard</title>
+  <link rel="icon" href="../favicon.ico" type="/favicon.ico" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
