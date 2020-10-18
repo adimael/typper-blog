@@ -36,7 +36,7 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-default navbar-expand-lg navbar-light">
     <div class="navbar-header d-flex col">
-      <a class="navbar-brand" href="#">Typ<b>per</b></a>
+      <a class="navbar-brand" href="javascript:void(0);">Typ<b>per</b></a>
       <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
         <span class="navbar-toggler-icon"></span>
         <span class="icon-bar"></span>
@@ -162,7 +162,7 @@
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-<footer id="gtco-footer" role="contentinfo" style="background-color:#181a1b;" data-stellar-background-ratio="0.5">
+  <footer id="gtco-footer" role="contentinfo" style="background-color:#181a1b;" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="gtco-container">
     <div class="row row-pb-md">
@@ -189,22 +189,22 @@
           <h3>Redes Sociais</h3>
           <ul class="gtco-social-icons">
             <li>
-              <a href="https://twitter.com/adimaelbr">
+              <a href="https://twitter.com/adimaelbr" target="_blank">
                 <i class="icon-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/adimael.dev">
+              <a href="https://www.facebook.com/adimael.dev" target="_blank">
                 <i class="icon-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0);">
+              <a href="javascript:void(0);" target="_blank">
                 <i class="icon-linkedin"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/c/Infoworkportal/">
+              <a href="https://www.youtube.com/c/Infoworkportal/" target="_blank">
                 <i class="icon-youtube"></i>
               </a>
             </li>
