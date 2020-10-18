@@ -63,9 +63,9 @@
         <?php
         if(isset($_SESSION['username']))
         {
-          echo '<a class="nav-login dropdown-toggle" href="suporte/dashboard.php">Admin</a>';
+          echo '<a class="nav-login dropdown-toggle" target="_blank" href="suporte/dashboard.php"><i class="icon-stack"></i>Admin</a>';
           echo '<li class="nav-item">
-          <a href="logout.php" class="btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Logout</a></li>';
+          <a href="logout.php" class="btn-primary dropdown-toggle get-started-btn mt-1 mb-1"><i class="icon-arrow-right"></i>Logout</a></li>';
         } else {
           echo '<a data-toggle="dropdown" class="nav-login dropdown-toggle" href="#">Login</a>';
             }
