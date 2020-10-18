@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fincorp</title>
+  <title>Typper</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="images/crm.png" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="../images/favicon.png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -63,7 +63,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020-2021 <a href="javascript:void(0);">Fincorp</a>.</strong>
+    <strong>Copyright &copy; 2020-2021 <a href="javascript:void(0);">Typper</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0
