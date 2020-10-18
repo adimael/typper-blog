@@ -48,7 +48,7 @@
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
       <ul class="nav navbar-nav">
         <li class="nav-item"><a href="index.php" class="nav-link">Página inicial</a></li>
-        <li class="nav-item"><a href="noticias.php" class="nav-link">Loja virtual</a></li>
+        <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Loja virtual</a></li>
         <li class="nav-item"><a href="portfolio.php" class="nav-link">Portfólio</a></li>
         <li class="nav-item"><a href="contact.php" class="nav-link">Suporte</a></li>
       </ul>
@@ -172,15 +172,15 @@
           <h3>Entrar em Contato</h3>
           <ul class="gtco-quick-contact">
             <li>
-              <a href="#">
+              <a href="javascript:void(0);">
                 <i class="icon-phone"></i> (73) 99973-8916</a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0);">
                 <i class="icon-mail2"></i> adimaelbr@gmail.com</a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0);">
                 <i class="icon-chat"></i> Chat</a>
             </li>
           </ul>
@@ -189,22 +189,22 @@
           <h3>Redes Sociais</h3>
           <ul class="gtco-social-icons">
             <li>
-              <a href="https://twitter.com/hcodebr">
+              <a href="https://twitter.com/adimaelbr">
                 <i class="icon-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/hcodebr">
+              <a href="https://www.facebook.com/adimael.dev">
                 <i class="icon-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/grupo-hcode/">
+              <a href="javascript:void(0);">
                 <i class="icon-linkedin"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA">
+              <a href="https://www.youtube.com/c/Infoworkportal/">
                 <i class="icon-youtube"></i>
               </a>
             </li>
