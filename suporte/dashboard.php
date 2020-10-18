@@ -1,5 +1,13 @@
+<?php
+session_start();
+include('../verificar_login.php');
+if($_SESSION['access_level'] != 'Suporte'){
+  header('Location: ../index.php');
+  exit();
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +46,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Blog</a>
+        <a href="../index.php" class="nav-link">Blog</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Portfólio</a>

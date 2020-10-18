@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br" class="theme-light">
 <head>
@@ -59,10 +60,19 @@
       </form>
       <ul class="nav navbar-nav navbar-right ml-auto">
         <li class="nav-item">
-          <a data-toggle="dropdown" class="nav-login dropdown-toggle" href="#">Login</a>
+        <?php
+        if(isset($_SESSION['username']))
+        {
+          echo '<a class="nav-login dropdown-toggle" href="suporte/dashboard.php">Admin</a>';
+          echo '<li class="nav-item">
+          <a href="logout.php" class="btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Logout</a></li>';
+        } else {
+          echo '<a data-toggle="dropdown" class="nav-login dropdown-toggle" href="#">Login</a>';
+            }
+          ?>
           <ul class="dropdown-menu form-wrapper">
             <li>
-              <form action="/examples/actions/confirmation.php" method="post">
+              <form action="conexao.php" method="post">
                 <p class="hint-text">Faça login com sua conta:</p>
                 <div class="form-group social-btn clearfix">
                   <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
@@ -70,37 +80,15 @@
                 </div>
                 <div class="or-seperator"><b>or</b></div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Username" required="required">
+                  <input type="text" name="username" class="form-control" placeholder="Username" required="required" autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password" required="required">
+                  <input type="password" name="password" class="form-control" placeholder="Password" required="required">
                 </div>
                 <input type="submit" class="btn btn-primary btn-block" value="Login">
                 <div class="form-footer">
                   <a href="#">Esqueceu sua senha?</a>
                 </div>
-              </form>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <ul class="dropdown-menu form-wrapper">
-            <li>
-              <form action="/examples/actions/confirmation.php" method="post">
-                <p class="hint-text">Preencha este formulário para criar sua conta!</p>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Username" required="required">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password" required="required">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Confirm Password" required="required">
-                </div>
-                <div class="form-group">
-                  <label class="checkbox-inline"><input type="checkbox" required="required"> Eu aceito os <a href="#">Termos &amp; Condições</a></label>
-                </div>
-                <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
               </form>
             </li>
           </ul>
