@@ -26,7 +26,9 @@ if($_SESSION['access_level'] != 'Suporte'){
   <!-- JQVMap -->
   <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/darkmode.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -52,6 +54,9 @@ if($_SESSION['access_level'] != 'Suporte'){
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Portfólio</a>
       </li>
+      <div class="container">
+    <button id="switch" onclick="toggleTheme()">Switch</button>
+</div>
     </ul>
 
     <!-- SEARCH FORM -->
@@ -153,9 +158,10 @@ if($_SESSION['access_level'] != 'Suporte'){
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+      <!-- Logout -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="../logout.php" title="Sair">
+          <i class="fas fa-sign-out-alt"></i>
         </a>
       </li>
     </ul>
@@ -931,6 +937,7 @@ if($_SESSION['access_level'] != 'Suporte'){
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <strong>Copyright &copy; 2020-2021 <a href="http://typper.com">typper</a>.</strong>
     All rights reserved.
@@ -947,6 +954,8 @@ if($_SESSION['access_level'] != 'Suporte'){
 </div>
 <!-- ./wrapper -->
 
+<!-- dark mode -->
+<script type="text/javascript" src="dist/js/darkmode.js"></script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

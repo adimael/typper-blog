@@ -29,7 +29,9 @@ if($_SESSION['access_level'] != 'Suporte'){
   <link rel="stylesheet" href="plugins/select2/css/select2.css">
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/darkmode.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -48,6 +50,9 @@ if($_SESSION['access_level'] != 'Suporte'){
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Portfólio</a>
       </li>
+      <div class="container">
+    <button id="switch" onclick="toggleTheme()">Switch</button>
+    </div>
     </ul>
 
     <!-- SEARCH FORM -->
@@ -419,6 +424,8 @@ if($_SESSION['access_level'] != 'Suporte'){
 </div>
 <!-- ./wrapper -->
 
+<!-- dark mode -->
+<script type="text/javascript" src="dist/js/darkmode.js"></script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
