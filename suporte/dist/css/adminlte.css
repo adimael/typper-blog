@@ -335,7 +335,7 @@ h6 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: inherit
+    color: var(--font-color);
 }
 .h1,
 h1 {
@@ -5549,7 +5549,7 @@ a.disabled.mailbox-attachment-close {
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #fff;
+    background-color: var(--color-primary);
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .3rem;
@@ -11086,12 +11086,12 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 }
 .sidebar-dark-success .nav-sidebar>.nav-item>.nav-link.active,
 .sidebar-light-success .nav-sidebar>.nav-item>.nav-link.active {
-    background-color: #28a745;
+    background-color: #001f3f!important;
     color: #fff
 }
 .sidebar-dark-success .nav-sidebar.nav-legacy>.nav-item>.nav-link.active,
 .sidebar-light-success .nav-sidebar.nav-legacy>.nav-item>.nav-link.active {
-    border-color: #28a745
+    border-color: #001f3f!important;
 }
 .sidebar-dark-info .nav-sidebar>.nav-item>.nav-link.active,
 .sidebar-light-info .nav-sidebar>.nav-item>.nav-link.active {
@@ -12663,7 +12663,8 @@ body.text-sm .control-sidebar {
     line-height: calc(1.8125rem + 2px)
 }
 label:not(.form-check-label):not(.custom-file-label) {
-    font-weight: 700
+    font-weight: 700;
+    color: var(--font-color);
 }
 .warning-feedback {
     font-size: 80%;
@@ -24342,7 +24343,7 @@ blockquote.quote-gray-dark h6 {
     color: #fff
 }
 .bg-lime {
-    background-color: #01ff70!important
+    background-color: #001f3f!important;
 }
 .bg-lime,
 .bg-lime>a {

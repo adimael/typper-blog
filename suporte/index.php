@@ -1,90 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="theme-light">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Typper</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" type="../favicon.ico" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/navbar.css" type="text/css">
+  <link rel="stylesheet" href="../css/darkmode.css" type="text/css">
+  <link rel='stylesheet' href='../css/footer.css' />
 
- <!-- Favicon -->
-  <link rel="icon" href="favicon.png" type="images/crm.png" />
-  <link rel="shortcut icon" href="../images/favicon.png" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/script.js"></script>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <!-- Themify Icons-->
+  <link rel="stylesheet" href="../css/themify-icons.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
 </head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<body>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>404 Error Página</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-              <li class="breadcrumb-item active">404 Error Page</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="error-page">
-        <h2 class="headline text-warning"> 404</h2>
-
-        <div class="error-content">
-          <h3><i class="fas fa-exclamation-triangle text-warning"></i> Opa! Página não encontrada.</h3>
-
-          <p>
-          Não foi possível encontrar a página que você estava procurando.
-          Enquanto isso, você pode <a href="../">retornar para página principal</a>.
-          </p>
-          </form>
-        </div>
-        <!-- /.error-content -->
-      </div>
-      <!-- /.error-page -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2020-2021 <a href="javascript:void(0);">Typper</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+    <div class="navbar-header d-flex col">
+      <a class="navbar-brand" href="javascript:void(0);">Typ<b>per</b></a>
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+        <span class="navbar-toggler-icon"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-  </footer>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a href="/typper-blog" class="nav-link">Página inicial</a></li>
+      </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+<div class="container">
+  <h1 class="bemvindo">403 acesso negado! (access forbidden).</h1>
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+  <!-- dark mode -->
+  <script type="text/javascript" src="../js/darkmode.js"></script>
+  <div class="error">
+      <img src="../images/acesso-negado.png" alt="robot">
+      <ul class="post-user">
+       <a href="/typper-blog"><li>Seu acesso foi negado!</li></a>
+      </ul>
+      <ul class="post-desc">
+        <li>
+          <div>Por favor, faça login ou acesse nossa central de suporte para mais informações.</div>
+        </li>
+      </ul>
+      <div class="btnsuport">
+        <button>Central de Suporte</button>
+      </div>
+  </div>
+  
+      <br>
+
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<footer id="gtco-footer" role="contentinfo" style="background-color:#181a1b;" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="gtco-container">
+    <div class="row row-pb-md">
+
+      <div class="col-md-12 text-center">
+        <div class="gtco-widget">
+          <h3>Entrar em Contato</h3>
+          <ul class="gtco-quick-contact">
+            <li>
+              <a href="#">
+                <i class="icon-phone"></i> (73) 99973-8916</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-mail2"></i> adimaelbr@gmail.com</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-chat"></i> Chat</a>
+            </li>
+          </ul>
+        </div>
+        <div class="gtco-widget">
+          <h3>Redes Sociais</h3>
+          <ul class="gtco-social-icons">
+            <li>
+              <a href="https://twitter.com/hcodebr">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/hcodebr">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/grupo-hcode/">
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA">
+                <i class="icon-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-12 text-center copyright">
+        <p>
+          <small class="block">&copy; 2020 typper. Todos os Direitos Reservados.</small>
+          <small class="block">Desenvolvido por
+            <a href="https://typper.com.br" target="_blank">typper.com.br</a>
+          </small>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>

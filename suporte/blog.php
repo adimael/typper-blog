@@ -30,6 +30,8 @@ if($_SESSION['access_level'] != 'Suporte'){
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/darkmode.css">
   <!-- Google Font: Source Sans Pro -->
@@ -154,9 +156,10 @@ if($_SESSION['access_level'] != 'Suporte'){
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+      <!-- Logout -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="../logout.php" title="Sair">
+          <i class="fas fa-sign-out-alt"></i>
         </a>
       </li>
     </ul>
@@ -329,7 +332,7 @@ if($_SESSION['access_level'] != 'Suporte'){
         <div class="row mb-2">
         <div class="col-sm-6">
           <a href="#" class="btn btn-success" data-toggle="modal"
-          data-target=".bd-example-modal-lg-produto"><i class="material-icons">&#xe2bc;</i> <span>Nova publicação</span></a>
+          data-target=".bd-example-modal-lg-publicar"><i class="material-icons">&#xe2bc;</i> <span>Nova publicação</span></a>
           <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE24D;</i> <span>Exporta dados para o Excel</span></a>
           </div>
           <div class="col-sm-6">
@@ -428,6 +431,14 @@ if($_SESSION['access_level'] != 'Suporte'){
 <script type="text/javascript" src="dist/js/darkmode.js"></script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<!-- Editor de texto -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
+</script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables -->
@@ -530,5 +541,90 @@ if($_SESSION['access_level'] != 'Suporte'){
 
   })
 </script>
+
+  <!-- Publicar postagem -->
+  <div class="modal bd-example-modal-lg-publicar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cadastrar novo produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" enctype="multipart/form-data" action="" class="">
+<div class="form-row">
+    <div class="col-md-6">
+        <div class="position-relative form-group">
+            <label for="nome-produto" class="">Titulo da Postagem</label>
+            <input name="txtproduto" autocomplete="off" id="nome-produto" placeholder="Titulo da Postagem" type="text" class="form-control">
+        </div>
+    </div>
+</div>
+<div class="position-relative form-group">
+              <div class="mb-3">
+                <textarea class="textarea" placeholder="Place some text here"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+</div>
+<div class="position-relative form-group">
+    <label for="fotoperfil" class="">Imagem do post:</label>
+    <input name="img" id="fotoperfil" type="file" class="form-control" required>
+</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="cadastrar-produto">Publicar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
+<!-- Editar postagem -->
+<div class="modal bd-example-modal-lg-editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cadastrar novo produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" enctype="multipart/form-data" action="" class="">
+<div class="form-row">
+    <div class="col-md-6">
+        <div class="position-relative form-group">
+            <label for="nome-produto" class="">Titulo da Postagem</label>
+            <input name="txtproduto" autocomplete="off" id="nome-produto" placeholder="Titulo da Postagem" type="text" class="form-control">
+        </div>
+    </div>
+</div>
+<div class="position-relative form-group">
+              <div class="mb-3">
+                <textarea class="textarea" placeholder="Place some text here"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+</div>
+<div class="position-relative form-group">
+    <label for="fotoperfil" class="">Imagem do post:</label>
+    <input name="img" id="fotoperfil" type="file" class="form-control" required>
+</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="cadastrar-produto">Publicar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

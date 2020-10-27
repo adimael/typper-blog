@@ -20,6 +20,12 @@ html, body {
   border-radius: 20px;
 }
 
+#error{
+  text-align: center;
+  background: red;
+  width: 220px;
+}
+
 .bemvindo{
   text-align: center;
 }
@@ -66,6 +72,18 @@ html, body {
 .post-desc{
   list-style-type: none;
   margin-left: 160px;
+}
+
+.error{
+  width: auto;
+    height: auto;
+    padding-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid;
+    background-color: rgb(83, 25, 25);
 }
 
 .prof-panel {

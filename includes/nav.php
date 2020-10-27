@@ -46,6 +46,7 @@
                   <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
                 </div>
                 <div class="or-seperator"><b>or</b></div>
+                <div id="error"><?php include("error.php") ?></div>
                 <div class="form-group">
                   <input type="text" name="username" class="form-control" placeholder="Username" required="required" autocomplete="off">
                 </div>
@@ -54,7 +55,7 @@
                 </div>
                 <input type="submit" class="btn btn-primary btn-block" value="Login">
                 <div class="form-footer">
-                  <a href="#">Esqueceu sua senha?</a>
+                  <a href="javascript:void(0);">Esqueceu sua senha?</a>
                 </div>
               </form>
             </li>

@@ -12,7 +12,7 @@ if(empty($_POST['username']) || empty($_POST['password'])){
 $username = mysqli_real_escape_string($conn, $_POST['username']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-$query = "SELECT * FROM usuarios WHERE usuarios.username = '{$username}' AND usuarios.password 
+$query = "SELECT * FROM usuarios WHERE BINARY usuarios.username = '{$username}' AND BINARY usuarios.password 
       = '{$password}' ";
 
 $result = mysqli_query($conn, $query);
