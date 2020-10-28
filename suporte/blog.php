@@ -23,7 +23,7 @@ if($_SESSION['access_level'] != 'Suporte'){
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="plugins/select2/css/select2.css">
@@ -368,7 +368,7 @@ if($_SESSION['access_level'] != 'Suporte'){
                   </thead>
                   <tbody>
                   <tr>
-                    <td>CARD 1</td>
+                    <td>Titulo da primeira postagem</td>
                     <td><img src="../images/post.png" class="imgpost" alt="imgpost"></td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, excepturi...</td>
                     <td>18/10/2020</td>
@@ -382,7 +382,7 @@ if($_SESSION['access_level'] != 'Suporte'){
                     </div></td>
                   </tr>
                   <tr>
-                    <td>CARD 2</td>
+                    <td>Titulo da segunda postagem</td>
                     <td><img src="../images/post1.png" class="imgpost" alt="imgpost"></td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, excepturi...</td>
                     <td>18/10/2020</td>
@@ -559,24 +559,24 @@ if($_SESSION['access_level'] != 'Suporte'){
     <div class="col-md-6">
         <div class="position-relative form-group">
             <label for="nome-produto" class="">Titulo da Postagem</label>
-            <input name="txtproduto" autocomplete="off" id="nome-produto" placeholder="Titulo da Postagem" type="text" class="form-control">
+            <input name="txttitulo" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
         </div>
     </div>
 </div>
 <div class="position-relative form-group">
               <div class="mb-3">
-                <textarea class="textarea" placeholder="Place some text here"
+                <textarea class="textarea" name="txttexto" placeholder="Place some text here"
                           style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
 </div>
 <div class="position-relative form-group">
-    <label for="fotoperfil" class="">Imagem do post:</label>
-    <input name="img" id="fotoperfil" type="file" class="form-control" required>
+    <label for="imagem" class="">Imagem do post:</label>
+    <input name="img" id="imagem" type="file" class="form-control" required>
 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="cadastrar-produto">Publicar</button>
+                <button type="submit" class="btn btn-primary" name="publicar">Publicar</button>
             </form>
             </div>
         </div>
@@ -603,28 +603,31 @@ if($_SESSION['access_level'] != 'Suporte'){
     <div class="col-md-6">
         <div class="position-relative form-group">
             <label for="nome-produto" class="">Titulo da Postagem</label>
-            <input name="txtproduto" autocomplete="off" id="nome-produto" placeholder="Titulo da Postagem" type="text" class="form-control">
+            <input name="titulo" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
         </div>
     </div>
 </div>
 <div class="position-relative form-group">
               <div class="mb-3">
-                <textarea class="textarea" placeholder="Place some text here"
+                <textarea class="textarea" name="texto" placeholder="Place some text here"
                           style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
 </div>
 <div class="position-relative form-group">
     <label for="fotoperfil" class="">Imagem do post:</label>
-    <input name="img" id="fotoperfil" type="file" class="form-control" required>
+    <input name="imagem" id="fotoperfil" type="file" class="form-control" required>
 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="cadastrar-produto">Publicar</button>
+                <button type="submit" class="btn btn-primary" name="editar-postagem">Publicar</button>
             </form>
             </div>
         </div>
     </div>
 </div>
 
+<?php
+  include("function/cadastrar.php");
+?>
 
