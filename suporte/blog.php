@@ -402,6 +402,7 @@ if($row == ''){
     while($res_1 = mysqli_fetch_array($result)){
         $id = $res_1["id"];
         $titulo = $res_1["titulo"];
+        $texto = $res_1["texto"];
         $img = $res_1["imagem"];
         $dt_registro = $res_1["data"];
 
@@ -659,24 +660,24 @@ aria-hidden="true">
     <div class="col-md-6">
         <div class="position-relative form-group">
             <label for="nome-produto" class="">Titulo da Postagem</label>
-            <input name="titulo" value="<?php echo $res_1['titulo']; ?>" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
+            <input name="txttitulo" value="<?php echo $res_1['titulo']; ?>" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
         </div>
     </div>
 </div>
 <div class="position-relative form-group">
               <div class="mb-3">
-                <textarea class="textarea" value="<?php echo $res_1['texto']; ?>" name="texto" placeholder="Place some text here"
-                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                <textarea class="textarea" name="texto" placeholder="Place some text here"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $res_1['texto']; ?></textarea>
               </div>
 </div>
 <div class="position-relative form-group">
     <label for="fotoperfil" class="">Imagem do post:</label>
-    <input name="imagem" id="fotoperfil" type="file" class="form-control" required>
+    <input name="txtimagem" id="fotoperfil" type="file" class="form-control">
 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" name="editar-produto" class="btn btn-primary">Atualizar</button>
+                <button type="submit" name="editar-postagem" class="btn btn-primary">Atualizar</button>
                 </form>
             </div>
         </div>
@@ -689,11 +690,10 @@ aria-hidden="true">
 <?php
 if(isset($_POST['editar-postagem'])){
   $titulo = $_POST['txttitulo'];
-  $imagem = $_POST['txtimagem'];
-  $texto = $_POST['txttexto'];
+  $texto = $_POST['texto'];
 
 //CADASTRO DE CLIENTES
-$query_editar = "UPDATE tb_postagens SET titulo = '$titulo', imagem = '$txtimagem', texto = '$txttexto' WHERE id = '$id' ";
+$query_editar = "UPDATE tb_postagens SET titulo = '$titulo', texto = '$texto' WHERE id = '$id' ";
 
 $result_editar = mysqli_query($conn, $query_editar);
 
