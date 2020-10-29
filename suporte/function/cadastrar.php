@@ -1,7 +1,5 @@
 <?php
 
-include('../db/db.php');
-
 if(isset($_POST['publicar'])){
   $titulo = $_POST['txttitulo'];
   $texto = $_POST['txttexto'];

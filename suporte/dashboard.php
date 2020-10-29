@@ -55,7 +55,7 @@ if($_SESSION['access_level'] != 'Suporte'){
         <a href="#" class="nav-link">Portfólio</a>
       </li>
       <div class="container">
-    <button id="switch" onclick="toggleTheme()">Switch</button>
+    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Switch</button>
 </div>
     </ul>
 
@@ -237,7 +237,7 @@ if($_SESSION['access_level'] != 'Suporte'){
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
-                Publicações-Os
+                Blog
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>

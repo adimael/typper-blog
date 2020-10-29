@@ -5,6 +5,7 @@ if($_SESSION['access_level'] != 'Suporte'){
   header('Location: ../index.php');
   exit();
 }
+include('../db/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +24,7 @@ if($_SESSION['access_level'] != 'Suporte'){
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="plugins/select2/css/select2.css">
@@ -53,7 +54,7 @@ if($_SESSION['access_level'] != 'Suporte'){
         <a href="#" class="nav-link">Portfólio</a>
       </li>
       <div class="container">
-    <button id="switch" onclick="toggleTheme()">Switch</button>
+    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Switch</button>
     </div>
     </ul>
 
@@ -235,7 +236,7 @@ if($_SESSION['access_level'] != 'Suporte'){
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
-                Publicações-Os
+                Blog
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -331,7 +332,7 @@ if($_SESSION['access_level'] != 'Suporte'){
       <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-          <a href="#" class="btn btn-success" data-toggle="modal"
+          <a href="#" class="btn btn-info" data-toggle="modal"
           data-target=".bd-example-modal-lg-publicar"><i class="material-icons">&#xe2bc;</i> <span>Nova publicação</span></a>
           <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE24D;</i> <span>Exporta dados para o Excel</span></a>
           </div>
@@ -356,47 +357,78 @@ if($_SESSION['access_level'] != 'Suporte'){
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+
+                <!--LISTAR TODOS OS PRODUTOS -->
+
+<?php
+
+
+if(isset($_GET['buttonPesquisar']) and $_GET['txtpesquisar'] != ''){
+    $produto = $_GET['txtpesquisar'] . '%';
+    $query = "select * from tb_produtos where id_user = $_SESSION[id_user]  order by produto asc"; 
+}else if(isset($_GET['buttonPesquisarCPF']) and $_GET['txtpesquisarcpf'] != ''){
+    $produto = $_GET['txtpesquisarcpf'];
+    $query = "select * from tb_produtos where cpf = '$produto'  order by produto asc"; 
+}
+
+else{ 
+$query = "select * from tb_postagens WHERE id = id order by titulo ASC"; 
+}
+
+    $result = mysqli_query($conn, $query);
+    //$dado = mysqli_fetch_array($result);
+    $row = mysqli_num_rows($result);
+
+if($row == ''){
+
+    echo "<h3> Não existem dados cadastrados no banco </h3>";
+
+}else{
+
+?>
+
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>Titulo</th>
                     <th>Imagem</th>
-                    <th>Texto</th>
                     <th>Data</th>
                     <th>Ação</th>
                   </tr>
                   </thead>
                   <tbody>
+                  <?php 
+
+    while($res_1 = mysqli_fetch_array($result)){
+        $id = $res_1["id"];
+        $titulo = $res_1["titulo"];
+        $img = $res_1["imagem"];
+        $dt_registro = $res_1["data"];
+
+        $dt_registro2 = implode('/', array_reverse(explode('-', $dt_registro)));
+
+    ?>
                   <tr>
-                    <td>Titulo da primeira postagem</td>
-                    <td><img src="../images/post.png" class="imgpost" alt="imgpost"></td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, excepturi...</td>
-                    <td>18/10/2020</td>
+                    <td><?php echo $titulo; ?></td>
+                    <td><?php echo "<img src='../images/postagens/".$img."' class='imgpost' alt='imgpost'"; ?></td>
+                    <td><?php echo $dt_registro2; ?></td>
                     <td><div class="widget-content-right">
-                    <a href="produtos.php?func=edita&id_produto=<?php echo $id_produto; ?>"><button class="border-0 btn-transition btn btn-outline-success" data-toggle="modal"
+                    <a href="blog.php?func=edita&id=<?php echo $id; ?>"><button class="border-0 btn-transition btn btn-outline-success" data-toggle="modal"
                     data-target=".bd-example-modal-lg-editar"><i class="fa fa-edit"></i>
                     </button></a>
-                    <a href="produtos.php?func=deleta&id_produto=<?php echo $id_produto; ?>"><button class="border-0 btn-transition btn btn-outline-danger">
+                    <a href="blog.php?func=deleta&id=<?php echo $id; ?>"><button class="border-0 btn-transition btn btn-outline-danger">
                     <i class="fa fa-trash-alt"></i>
                     </button></a>
                     </div></td>
                   </tr>
-                  <tr>
-                    <td>Titulo da segunda postagem</td>
-                    <td><img src="../images/post1.png" class="imgpost" alt="imgpost"></td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, excepturi...</td>
-                    <td>18/10/2020</td>
-                    <td><div class="widget-content-right">
-                    <a href="produtos.php?func=edita&id_produto=<?php echo $id_produto; ?>"><button class="border-0 btn-transition btn btn-outline-success" data-toggle="modal"
-                    data-target=".bd-example-modal-lg-editar"><i class="fa fa-edit"></i>
-                    </button></a>
-                    <a href="produtos.php?func=deleta&id_produto=<?php echo $id_produto; ?>"><button class="border-0 btn-transition btn btn-outline-danger">
-                    <i class="fa fa-trash-alt"></i>
-                    </button></a>
-                    </div></td>
-                  </tr>
+                  <?php 
+                    }                        
+                  ?>
                   </tbody>
                 </table>
+                <?php 
+                }                        
+                ?>
               </div>
               <!-- /.card-body -->
             </div>
@@ -586,9 +618,33 @@ if($_SESSION['access_level'] != 'Suporte'){
 </body>
 </html>
 
-<!-- Editar postagem -->
-<div class="modal bd-example-modal-lg-editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-  aria-hidden="true">
+<!--EXCLUIR -->
+<?php
+if(@$_GET['func'] == 'deleta'){
+  $id = $_GET['id'];
+  $query = "DELETE FROM tb_postagens where id = '$id'";
+  mysqli_query($conn, $query);
+  $url= '../images/postagens/'.$img;
+  unlink($url);
+  echo "<script language='javascript'> window.location='blog.php'; </script>";
+}
+?>
+
+<!--EDITAR -->
+<?php
+if(@$_GET['func'] == 'edita'){ 
+  $id = $_GET['id'];
+  $query = "select * from tb_postagens where id = '$id'";
+  $result = mysqli_query($conn, $query);
+
+  while($res_1 = mysqli_fetch_array($result)){
+
+?>
+
+
+<!-- modal Editar -->
+<div id="modalEditar" class="modal fade bd-example-modal-lg-editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -599,17 +655,17 @@ if($_SESSION['access_level'] != 'Suporte'){
             </div>
             <div class="modal-body">
             <form method="POST" enctype="multipart/form-data" action="" class="">
-<div class="form-row">
+            <div class="form-row">
     <div class="col-md-6">
         <div class="position-relative form-group">
             <label for="nome-produto" class="">Titulo da Postagem</label>
-            <input name="titulo" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
+            <input name="titulo" value="<?php echo $res_1['titulo']; ?>" autocomplete="off" id="titulo" placeholder="Titulo da Postagem" type="text" class="form-control">
         </div>
     </div>
 </div>
 <div class="position-relative form-group">
               <div class="mb-3">
-                <textarea class="textarea" name="texto" placeholder="Place some text here"
+                <textarea class="textarea" value="<?php echo $res_1['texto']; ?>" name="texto" placeholder="Place some text here"
                           style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
 </div>
@@ -620,12 +676,41 @@ if($_SESSION['access_level'] != 'Suporte'){
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="editar-postagem">Publicar</button>
-            </form>
+                <button type="submit" name="editar-produto" class="btn btn-primary">Atualizar</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+<script> $("#modalEditar").modal("show"); </script> 
+
+<!--Comando para editar os dados UPDATE -->
+<?php
+if(isset($_POST['editar-postagem'])){
+  $titulo = $_POST['txttitulo'];
+  $imagem = $_POST['txtimagem'];
+  $texto = $_POST['txttexto'];
+
+//CADASTRO DE CLIENTES
+$query_editar = "UPDATE tb_postagens SET titulo = '$titulo', imagem = '$txtimagem', texto = '$txttexto' WHERE id = '$id' ";
+
+$result_editar = mysqli_query($conn, $query_editar);
+
+if($result_editar == ''){
+  //Mensagem Ocorreu um erro ao cadastrar!
+  echo "<script language='javascript'> window.alert('Ocorreu um erro ao Editar!'); </script>";
+  echo "<script language='javascript'> window.location='blog.php'; </script>";
+
+} else {
+  //Mensagem de Salvo com Sucesso!
+  echo "<script language='javascript'> window.alert('Editado com Sucesso!'); </script>";
+  echo "<script language='javascript'> window.location='blog.php'; </script>";
+}
+}
+?>
+
+<?php } } ?>
 
 <?php
   include("function/cadastrar.php");
