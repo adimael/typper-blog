@@ -20,6 +20,16 @@ html, body {
   border-radius: 20px;
 }
 
+p{
+  color: var(--font-color);
+}
+
+element.style {
+  color: var(--font-color);
+    font-family: muli, sans-serif;
+    font-size: 18px;
+}
+
 #error{
   text-align: center;
   background: red;

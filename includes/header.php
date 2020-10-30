@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start(); 
+include('db/db.php');
+require("suporte/function/limita-texto.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br" class="theme-light">
 <head>
