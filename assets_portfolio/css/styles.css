@@ -23,6 +23,9 @@ h6 {
   font-weight: 700;
   color: #778492;
 }
+p {
+  color: #fff;
+}
 a {
   color: #3AAA64;
   -webkit-transition: all 0.4s ease-in-out;
@@ -177,8 +180,15 @@ iframe {
   margin-bottom: 30px;
 }
 .section .section-inner {
-  background: var(--color-posts);
+  background: #324150;
   padding: 30px;
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  color: #fff;
+  border-left: 5px solid #eee;
 }
 .section .heading {
   margin-top: 0;
@@ -204,7 +214,7 @@ iframe {
   font-size: 12px;
 }
 .latest .item .title a {
-  color: #778492;
+  color: #fff;
 }
 .latest .item .title a:hover {
   color: #5f6b77;
@@ -226,7 +236,7 @@ iframe {
 }
 .latest .featured .summary {
   margin-bottom: 30px;
-  color: #778492;
+  color: #fff;
 }
 .latest .featured img {
   margin-bottom: 30px;
