@@ -9,7 +9,7 @@ include("includes/header.php");
 ?>
 
   <div class="container">
-    <button id="switch" onclick="toggleTheme()">Switch</button>
+    <button id="switch" onclick="toggleTheme()">Dark mode 😎</button>
 </div>
 
 <div class="container">

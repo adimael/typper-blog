@@ -54,7 +54,7 @@ include('../db/db.php');
         <a href="#" class="nav-link">Portfólio</a>
       </li>
       <div class="container">
-    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Switch</button>
+    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Dark mode 😎</button>
     </div>
     </ul>
 

@@ -55,7 +55,7 @@ if($_SESSION['access_level'] != 'Suporte'){
         <a href="#" class="nav-link">Portfólio</a>
       </li>
       <div class="container">
-    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Switch</button>
+    <button id="switch" class="btn btn-info" onclick="toggleTheme()">Dark mode 😎</button>
 </div>
     </ul>
 
