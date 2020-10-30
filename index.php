@@ -25,7 +25,7 @@ include("includes/header.php");
     <div class="container" id="jar">
     <main class="grid">
 
-      <!--LISTAR TODOS OS PRODUTOS -->
+      <!--LISTAR TODOS as postagens -->
 
 <?php
 
