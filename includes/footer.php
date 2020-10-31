@@ -64,7 +64,6 @@
 <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap-select.js"></script>
-  <script src="js/message.js"></script>
   <script src="js/script.js"></script>
   <script src="js/paginacao.js"></script>
   <!-- Placed at the end of the document so the pages load faster -->

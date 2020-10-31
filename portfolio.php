@@ -4,7 +4,6 @@ include("includes/header.php");
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets_portfolio/css/styles.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
 
 <body>
 
@@ -18,13 +17,13 @@ include("includes/header.php");
 
 <div class="container">
 <div class="post">
-      <a href="contact.php"><img src="images/tess.png" alt="robot"></a>
-      <ul class="post-user">
-       <li>Adimael DevOps</li>
+      <a href="contact.php"><img style="padding:40px;" src="assets_portfolio/images/adimael_dev.png" alt="robot"></a>
+      <ul class="portfolio-user">
+       <li style="margin-left: 190px; margin-top: -150px;">Adimael DevOps</li>
       </ul>
-      <ul class="post-desc">
+      <ul class="portfolio-desc">
         <li>
-          <div id="result2">Olá! Meu nome é Adimael, Sou Engenheiro de software.</div>
+          <div id="result2" style="margin-left: 180px; list-style-type: none;">Olá! Meu nome é Adimael, Sou Engenheiro de software.</div>
         </li>
       </ul>
       <a href="contact.html"><div class="btnsuport">
@@ -165,7 +164,7 @@ include("includes/header.php");
                         <div class="content">
                             <ul class="list-unstyled">
                             <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FMundo-Tecnologia-Inform%25C3%25A1tica%2F411171202331909%3Fref%3Dbookmarks&amp;width=285&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:285px;" allowtransparency="true"></iframe>
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Gandu, Bahia, Brasil</li>
+                                <li style="color: #fff"><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Gandu, Bahia, Brasil</li>
                                 <li><i class="fa fa-envelope"></i><span class="sr-only">Email:</span><a href="mailto:adimaelbr@gmail.com?Subject=Hello%20there">adimaelbr@gmail.com</a></li>
                                 <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">typper.tk</a></li>
                             </ul>
@@ -275,12 +274,6 @@ include("includes/header.php");
   <script src="assets_portfolio/plugins/jquery-1.11.3.min.js"></script>
     <script src="assets_portfolio/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets_portfolio/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-    <!-- github calendar plugin -->
-    <script src="assets_portfolio/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <link rel="stylesheet" href="assets_portfolio/plugins/github-calendar/dist/github-calendar.css">
-    <link rel="stylesheet" href="assets_portfolio/plugins/github-calendar/dist/github-calendar-responsive.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
     <!-- custom js - initializes RSS, Github Calendar, Skills and so on -->
     <script src="assets_portfolio/js/main.js"></script>
 

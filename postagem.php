@@ -17,9 +17,20 @@ include("includes/header.php");
 
   <!-- dark mode -->
   <script type="text/javascript" src="js/darkmode.js"></script>
-  <?php
-  include("includes/tess.php")
-  ?>
+  <div class="post">
+      <a href="contact.php"><img src="images/tess.png" alt="robot"></a>
+      <ul class="post-user">
+       <li>Tess Robots</li>
+      </ul>
+      <ul class="post-desc">
+        <li>
+          <div id="result2">Olá! Sou a Tess, estou aqui para lhe ajudar. Qualquer duvida clique sobre mim para que você seja direcionado para nossa página de suporte.</div>
+        </li>
+      </ul>
+      <a href="contact.html"><div class="btnsuport">
+        <button>Central de Suporte</button>
+      </div></a>
+  </div>
 
 <?php
 	if(isset($_GET['id'])){

@@ -99,5 +99,7 @@ while($res_1 = mysqli_fetch_array($result)){
   include("includes/footer.php");
   ?>
 
+<script src="js/message.js"></script>
+
 </body>
 </html>
