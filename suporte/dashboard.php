@@ -274,6 +274,12 @@ if($_SESSION['access_level'] != 'Suporte'){
               <p>Chat</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="mailbox.php" class="nav-link">
+              <i class="nav-icon fas fa-inbox"></i>
+              <p>Caixa de e-mail</p>
+            </a>
+          </li>
           <li class="nav-header">FINANCEIRO</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
