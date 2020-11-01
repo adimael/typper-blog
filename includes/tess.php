@@ -1,5 +1,5 @@
 <div class="post">
-      <a href="contact.php"><img src="images/tess.png" alt="robot"></a>
+      <a href="suporte.php"><img src="images/tess.png" alt="robot"></a>
       <ul class="post-user">
        <li>Tess Robots</li>
       </ul>
@@ -8,7 +8,7 @@
           <div id="result"></div>
         </li>
       </ul>
-      <a href="contact.html"><div class="btnsuport">
+      <a href="suporte.php"><div class="btnsuport">
         <button>Central de Suporte</button>
       </div></a>
   </div>
