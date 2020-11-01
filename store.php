@@ -1,3 +1,9 @@
+<?php
+include("includes/header.php");
+?>
+<link rel="stylesheet" href="css/store.css" type="text/css">
+<body>
+  
 <!-- Navigation Bar -->
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
     <div class="navbar-header d-flex col">
@@ -13,9 +19,9 @@
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
       <ul class="nav navbar-nav">
         <li class="nav-item"><a href="index.php" class="nav-link">Página inicial</a></li>
-        <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Loja virtual</a></li>
+        <li class="nav-item active"><a href="store.php" class="nav-link">Loja virtual</a></li>
         <li class="nav-item"><a href="portfolio.php" class="nav-link">Portfólio</a></li>
-        <li class="nav-item"><a href="contact.php" class="nav-link">Suporte</a></li>
+        <li class="nav-item"><a href="suporte.php" class="nav-link">Suporte</a></li>
       </ul>
       <form class="navbar-form form-inline">
         <div class="input-group search-box">
@@ -64,3 +70,37 @@
       </ul>
     </div>
   </nav>
+
+  <div class="container">
+    <button id="switch" onclick="toggleTheme()">Dark mode 😎</button>
+</div>
+
+<div class="container">
+  <!-- dark mode -->
+  <script type="text/javascript" src="js/darkmode.js"></script>
+  
+</div>
+  <div class="mut-panel prof-panel">
+  <h3 style="color:red;">Não há nenhum produto disponível no momento!</h3>
+  <img src="images/store/pagina-em-construcao.png" alt="manutenção">
+    <div style="text-align: center;" class="container" id="jar">
+    <br>
+    <span style="color:#FBB448;">Estamos trabalhando para deixar tudo pronto. Aguarde...</span>
+    <main class="grid">
+
+    
+
+    </main>
+  </div>
+   
+  </div>
+      <br>
+
+  <?php
+  include("includes/footer.php");
+  ?>
+
+<script src="js/message.js"></script>
+
+</body>
+</html>

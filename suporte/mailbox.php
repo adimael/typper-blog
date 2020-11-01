@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../verificar_login.php');
+if($_SESSION['access_level'] != 'Suporte'){
+  header('Location: ../index.php');
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
