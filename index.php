@@ -136,7 +136,7 @@ while($res_1 = mysqli_fetch_array($result)){
           <h3><?php echo $titulo; ?></h3>
           <p> <?php echo limitarTexto($texto, $limite=176) ?></p>
         <div class="text">
-        <button onclick="window.location.href = 'postagem.php?id=<?php echo $id;?>'">ver post</button>
+        <button onclick="window.location.href = 'postagem.php?p=<?php echo $titulo;?>&id=<?php echo $id;?>'">ver post</button>
         </div>
       </article>
 
