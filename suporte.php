@@ -71,7 +71,7 @@ include("includes/header.php");
   </nav>
 
   <div class="container">
-    <button id="switch" onclick="toggleTheme()">Dark mode 😎</button>
+  <button class="btn btn-action mr-5" type="button" onclick="toggleTheme()"><i class="fa fa-moon-o" aria-hidden="true"></i><span class="sr-only">Toggle dark mode</span></button>
 </div>
 
 <div class="container">

@@ -17,6 +17,7 @@ require("suporte/function/limita-texto.php");
   <link rel='stylesheet' href='css/footer.css' /> 
 
   <link rel="stylesheet" href="css/bootstrap-select.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
