@@ -378,7 +378,7 @@ if(isset($_GET['buttonPesquisar']) and $_GET['txtpesquisar'] != ''){
 }
 
 else{ 
-$query = "select * from tb_postagens WHERE id = id order by titulo ASC"; 
+$query = "select * from tb_postagens WHERE id = id order by id DESC"; 
 }
 
     $result = mysqli_query($conn, $query);

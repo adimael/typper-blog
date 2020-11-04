@@ -95,14 +95,14 @@ include("includes/header.php");
 
 if(isset($_GET['buttonPesquisar']) and $_GET['txtpesquisar'] != ''){
     $produto = $_GET['txtpesquisar'] . '%';
-    $query = "select * from tb_produtos where id_user = $_SESSION[id_user]  order by produto asc"; 
+    $query = "select * from tb_produtos where id_user = $_SESSION[id_user]  order by produto desc"; 
 }else if(isset($_GET['buttonPesquisarCPF']) and $_GET['txtpesquisarcpf'] != ''){
     $produto = $_GET['txtpesquisarcpf'];
-    $query = "select * from tb_produtos where cpf = '$produto'  order by produto asc"; 
+    $query = "select * from tb_produtos where cpf = '$produto'  order by produto desc"; 
 }
 
 else{ 
-$query = "select * from tb_postagens WHERE id = id order by titulo ASC"; 
+$query = "select * from tb_postagens order by id DESC;"; 
 }
 
     $result = mysqli_query($conn, $query);
