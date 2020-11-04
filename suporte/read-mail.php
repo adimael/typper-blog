@@ -37,10 +37,10 @@ if($_SESSION['access_level'] != 'Suporte'){
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.php" class="nav-link">Blog</a>
+        <a href="/" class="nav-link">Blog</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Portfólio</a>
+        <a href="portfolio.php" class="nav-link">Portfólio</a>
       </li>
       <div class="container">
     <button id="switch" class="btn btn-info" onclick="toggleTheme()">Dark mode 😎</button>

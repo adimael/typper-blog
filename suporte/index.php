@@ -41,7 +41,7 @@
     <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
       <ul class="nav navbar-nav">
-        <li class="nav-item"><a href="/typper-blog" class="nav-link">Página inicial</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Página inicial</a></li>
       </ul>
             </li>
           </ul>
@@ -58,7 +58,7 @@
   <div class="error">
       <img src="../images/acesso-negado.png" alt="robot">
       <ul class="post-user">
-       <a href="/typper-blog"><li>Seu acesso foi negado!</li></a>
+       <a href="/"><li>Seu acesso foi negado!</li></a>
       </ul>
       <ul class="post-desc">
         <li>
