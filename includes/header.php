@@ -9,7 +9,11 @@ require("suporte/function/limita-texto.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="var(--color-secondary);">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Typper</title>
+  <title>Typper - Sua rede de informação!</title>
+  <meta name="description" content="Desenvolvimento de software & tecnologias.">
+  <meta name="keywords" content="tecnologia, desenvolvimento de software, computação em nuvem, internet das coisas, IA, HTML, CSS, JavaScript, PHP, python, c#">
+  <meta name="google-site-verification" content="rhirdwMjmFYoM-k56WI1CcaMZLwnYsoegG046pziEHQ" />
+  <meta name="author" content="Adimael DevOps">
   <link rel="icon" href="favicon.ico" type="/favicon.ico" />
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/navbar.css" type="text/css">
