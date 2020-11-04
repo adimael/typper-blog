@@ -86,7 +86,7 @@ include("includes/header.php");
       </ul>
       <ul class="portfolio-desc">
         <li>
-          <div id="result2" style="margin-left: 180px; list-style-type: none;">Olá! Meu nome é Adimael, Sou Engenheiro de software.</div>
+          <div id="result2" style="margin-left: 180px; list-style-type: none;">Olá! Meu nome é Adimael, Sou Profissional em T.I.</div>
         </li>
       </ul>
       <a href="contact.html"><div class="btnsuport">
