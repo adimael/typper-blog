@@ -6,7 +6,7 @@ Projeto completo desenvolvido em PHP7 com página inicial de usuários + área a
 
 ## Comandos
 
-Clone o repositório com `git clone --branch=develop https://github.com/adimael/fincorp.git`.
+Clone o repositório com `git clone --branch=develop https://github.com/adimael/typper-blog.git`.
 
 ## Instalação
 
