@@ -2,7 +2,7 @@
 
 Projeto completo desenvolvido em PHP7 com página inicial de usuários + área administrativa.
 
-![Screenshot](/screenshot/blog-typper.png)
+![Screenshot](blog-typper.png)
 
 ## Comandos
 
