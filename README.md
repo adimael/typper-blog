@@ -23,4 +23,4 @@ $ Login: adimael
 $ Password: 112233sk
 ```
 Copyright and License
-Copyright (c) 2020 Adimael BR. Code released under the [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/adimael/typper-blog/master/LICENSE).
+Copyright (c) 2020 Adimael BR. Code released under the [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/adimael/typper-blog/master/LICENSE?token=AGUZ7QPBHJEDLZP23ENNPRK75ZCAA).
